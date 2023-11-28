@@ -1,5 +1,5 @@
 
-const board = [
+let board = [
     ["","",""],
     ["","",""],
     ["","",""]
@@ -203,3 +203,17 @@ function renderBoard(){
 
     boardContainer.innerHTML = html.join("");
 };
+
+
+
+function restartGame(){
+    board = [
+        ["","",""],
+        ["","",""],
+        ["","",""]
+    ];
+    startGame();
+};
+
+const resetButton = document.getElementById('resetButton');
+resetButton.addEventListener('click', restartGame);
