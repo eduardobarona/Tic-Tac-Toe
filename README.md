@@ -2,10 +2,6 @@
 
 This project is a simple implementation of the classic game Tic Tac Toe using HTML, CSS, and JavaScript. The game includes a functionality that allows users to restart the game without reloading the page, thanks to a reset button.
 
-## Try it Out
-
-You can play the Tic Tac Toe game by following this [link](https://tictactoe-edubarona.netlify.app).
-
 ## Technologies Used
 
 - HTML
@@ -23,10 +19,6 @@ You can play the Tic Tac Toe game by following this [link](https://tictactoe-edu
 1. Open the [Tic Tac Toe game](https://tictactoe-edubarona.netlify.app) in your web browser.
 2. Play the game by clicking on the grid to make your moves.
 3. Use the "Restart Game" button to reset the game at any time.
-
-## Preview
-
-[![Tic Tac Toe Preview](path/to/your/screenshot.png)](https://tictactoe-edubarona.netlify.app)
 
 ## Development
 
