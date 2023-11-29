@@ -6,6 +6,7 @@ let board = [
 ];
 
 let turn = 0; //0 = user; 1 = pc
+let copyTurn = 0;
 
 const boardContainer = document.querySelector("#board");
 const playerDiv = document.querySelector("#player");
@@ -15,6 +16,8 @@ startGame();
 function startGame(){
     renderBoard();
     turn = Math.random() <= 0.5 ? 0:1;
+
+    copyTurn = turn;
 
     renderCurrentPlayer();
 
@@ -62,6 +65,8 @@ function pcPlays(){
         let played = false;
         const options = checkIfCanWin();
 
+        console.log(options);
+
         if(options.length>0){
             const bestOption= options[0];
             for(let i = 0;i<bestOption.length;i++){
@@ -77,7 +82,17 @@ function pcPlays(){
             for(let i=0;i<board.length;i++){
                 for(let j=0;j<board[i].length;j++){
                     if(board[i][j]==="" && !played){
-                        board[i][j]="X"
+                        if(copyTurn==0||copyTurn==1){
+                            const iRandom = Math.floor(Math.random() * 2) + 1;
+                            const jRandom = Math.floor(Math.random() * 2) + 1;
+                            if(board[iRandom][jRandom]===""){
+                                board[iRandom][jRandom]="X";
+                                played=true;
+                                copyTurn=3;
+                                break;
+                            };
+                        };
+                        board[i][j]="X";
                         played=true;
                     };
                 };
@@ -96,7 +111,7 @@ function pcPlays(){
             renderDraw();
             return;
         }
-    },1000);
+    },150);
 };
 
 function renderDraw(){

@@ -5,14 +5,26 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background-color: lightcyan;
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #282c34; /* Color de fondo principal */
+    color: white; /* Color del texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Hace que el contenido ocupe toda la altura visible */
 }
 
 #app{
     width: 300px;
     height: 100vh;
     margin: 0 auto;
+
+    background-color: #2c3e50; /* Color de fondo del área del juego */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     
     display: flex;
     flex-direction: column;
@@ -41,4 +53,22 @@ body{
     border:solid 1px black;
     font-size: 28px;
     font-weight: bolder;
+}
+
+.app_button {
+    background-color: #4CAF50; /* Color de fondo */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 15px 32px; /* Relleno interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como elemento en línea */
+    font-size: 16px; /* Tamaño del texto */
+    margin: 10px 2px; /* Márgenes superior e inferior */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.app_button:hover {
+    background-color: #45a049; /* Cambiar el color de fondo al pasar el ratón */
 }
